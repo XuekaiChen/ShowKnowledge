@@ -8,23 +8,23 @@
 
 封面
 
-![封面](封面.PNG)
+![封面](封面.png)
 
 检索节点信息
 
-![检索节点信息](query_node2.PNG)
+![检索节点信息](query_node2.png)
 
 图谱全貌
 
-![图谱全貌](all_relations.PNG)
+![图谱全貌](all_relations.png)
 
 多轮对话
 
-![多轮对话](dialogue.PNG)
+![多轮对话](dialogue.png)
 
 程序流
 
-![程序流](程序流.PNG)
+![程序流](程序流.png)
 
 ---
 
