@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基于金融知识图谱的知识计算引擎</title>
+
+    <!--Bootstrap Stylesheet [ REQUIRED ]-->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="../static/images/北邮LOGO.png">
+
+    <!--对话渲染模板-->
+    <link href="../static/css/main.css" rel="stylesheet" type="text/css">
+
+    <!--Nifty Stylesheet [ REQUIRED ]-->
+    <link href="../static/css/nifty.css" rel="stylesheet">
+
+    <!--Nifty Premium Icon [ DEMONSTRATION ]-->
+    <link href="../static/css/nifty-demo-icons.min.css" rel="stylesheet">
+
+    <!--Demo [ DEMONSTRATION ]-->
+    <link href="../static/css/nifty-demo.min.css" rel="stylesheet">
+    <link href="../static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../static/css/wiki.css" rel="stylesheet">
+
+
+
+    <!--JAVASCRIPT-->
+    <!--=================================================-->
+
+    <!--Pace - Page Load Progress Par [OPTIONAL]-->
+    <link href="../static/css/pace.min.css" rel="stylesheet">
+
+    <script src="../static/js/pace.min.js"></script>
+
+
+    <!--jQuery [ REQUIRED ]-->
+    <script src="../static/js/jquery-2.2.4.min.js"></script>
+
+
+    <!--BootstrapJS [ RECOMMENDED ]-->
+    <script src="../static/js/bootstrap.min.js"></script>
+
+
+    <!--NiftyJS [ RECOMMENDED ]-->
+    <script src="../static/js/nifty.min.js"></script>
+    <script src="../static/js/icons.js"></script>
+    <script src="../static/js/echarts.min.js"></script>
+
+    <!--=================================================-->
+
+    <!--Demo script [ DEMONSTRATION ]-->
+    <script src="../static/js/nifty-demo.min.js"></script>
+
+
+</head>
+
+<body>
+    <div id="container" class="effect aside-float aside-bright mainnav-lg">
+
+        <!--NAVBAR-->
+        <header id="navbar">
+            <div id="navbar-container" class="boxed">
+                <!--Brand logo & name-->
+                <div class="navbar-header">
+                    <a href="{{ url_for('index') }}" class="navbar-brand">
+                        <img src="../static/images/北邮LOGO.png" alt="Nifty Logo" class="brand-icon">
+                        <div class="brand-title">
+                            <span class="brand-text">陈学楷研创</span>
+                        </div>
+                    </a>
+                </div>
+                <!--End brand logo & name-->
+
+                <!--Navbar Dropdown-->
+                <div class="navbar-content clearfix">
+                    <ul class="nav navbar-top-links pull-left">
+                        <!--Navigation toogle button-->
+                        <li class="tgl-menu-btn">
+                            <a class="mainnav-toggle" href="#">
+                                <i class="demo-pli-view-list"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-top-links pull-left">
+                        <h4>基于金融知识图谱的知识计算引擎构建</h4>
+                    </ul>
+                </div>
+                <!--End Navbar Dropdown-->
+            </div>
+        </header>
+        <!--END NAVBAR-->
+
+        <div class="boxed">
+            <!--MAIN NAVIGATION-->
+            <nav id="mainnav-container">
+                <div id="mainnav">
+                    <!--Menu-->
+                    <div id="mainnav-menu-wrap">
+                        <div class="nano">
+                            <div class="nano-content">
+                                <ul id="mainnav-menu" class="list-group">
+                                    <!--Category name1-->
+						            <li class="list-header">图谱可视化</li>
+                                    <!--Menu list item-->
+                                   <li>
+                                        <a href="{{ url_for('search_page')}}">
+                                            <i class="fa fa-search" style="width:24px"></i>
+                                            <span class="menu-title"><strong>检索节点信息</strong></span>
+                                        </a>
+                                   </li>
+                                    <li>
+                                        <a href="{{ url_for('get_all_relation') }}">
+                                            <i class="fa fa-pie-chart" style="width:24px"></i>
+                                            <span class="menu-title"><strong>图谱全貌</strong></span>
+                                        </a>
+                                    </li>
+                                    <!--Menu list item-->
+
+						            <li class="list-divider"></li>
+						            <!--Category name2-->
+						            <li class="list-header">问答系统</li>
+						            <!--Menu list item-->
+                                    <li >
+						                <a href="{{ url_for('dialogue_page') }}">
+						                    <i class="fa fa-comments" style="width:24px"></i>
+						                    <span class="menu-title"><strong>多轮对话</strong></span>
+						                </a>
+						            </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End menu-->
+
+                </div>
+            </nav>
+            <!--END MAIN NAVIGATION-->
+
+            <!--CONTENT CONTAINER-->
+            <div id="content-container">
+                <!--Page content-->
+                <div id="page-content">
+					<h4 class="text-main pad-btm bord-btm">对话系统</h4>
+                    <div id="col-l" style="margin-bottom: 0">
+                      <div class="col-l-t" style="height: 625px">
+                        <div class="content">
+                          <div class="bubble" id="Chat">
+                              <!--客服-->
+                              <div class="msg clearfix">
+                              <div class="user-assistant"> </div><span class="triangle"></span>
+                              <div class="article"><p>您好，我是金融问答助手。</p><p>欢迎使用金融知识图谱知识计算引擎，有什么股票方面的问题可以问我哦。</p></div>
+                              </div>
+                              <!--客户-->
+                              <div class="msg fr"><span class="triangle right"></span><div class="article">测试</div></div>
+                              <!--客服-->
+                              <div class="msg clearfix">
+                                <div class="user-assistant"></div><span class="triangle right"></span><div class="article">马上为您查找，请稍候.....</div></div>
+                           </div>
+                        </div>
+                      </div>
+                      <div class="col-l-b">
+                        <div class="faq-input-content">
+                            <label for="talkcontent"></label>
+                            <textarea name="question" class="input" id="talkcontent" placeholder="请输入你的问题(eg.宁德时代的股东是谁？)" autocomplete="off"></textarea>
+                            <button id="sendbtn" class="btn">发送</button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <!--End page content-->
+            </div>
+            <!--END CONTENT CONTAINER-->
+        </div>
+
+        <!-- FOOTER -->
+        <footer id="footer" style="margin-bottom: 0px">
+           <p class="pad-lft">Copyright&#0169; 2022 陈学楷  &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;All Rights Reserved </p>
+        </footer>
+        <!-- END FOOTER -->
+
+        <!-- SCROLL PAGE BUTTON -->
+        <button class="scroll-top btn">
+            <i class="pci-chevron chevron-up"></i>
+        </button>
+        <!-- END SCROLL PAGE BUTTON -->
+    </div>
+
+    <!--JavaScript内容，实现ChatSentClient()-->
+    <script type="text/javascript">
+    window.onload = function(){
+        var input = document.getElementById('talkcontent');  //查找缓存
+        document.getElementById('sendbtn').onclick = function (){
+            ChatSendClient();
+        }
+    }
+    //回车键事件
+    $(document).keypress(function (e) {if (e.which === 13) {ChatSendClient();event.returnValue = false;}});
+
+    function ChatSendClient(){
+        //将用户消息上传至消息记录框
+
+        var text = $('#talkcontent').val(),   //取输入内容
+             $msgbox = $('#Chat'),  //消息列表（拼接所有问答），bubble的id
+             sMesContent = '',  //用户单次提问html
+             aMesContent = '';  //客服回答html
+         if (text === ''){alert('请输入内容');return;}
+         else {
+             sMesContent = '<div class="msg fr"><span class="triangle right"></span><div class="article">' + text + '</div></div>'
+             $msgbox.html($msgbox.html() + sMesContent)
+             document.getElementById("talkcontent").value = "";
+             $('.col-l-t').animate({ scrollTop: document.getElementById('Chat').scrollHeight + 'px' }); //自动拉到最底部
+
+              //获取后端数据$.getJSON()或$.ajax()
+            $.getJSON('/dialogue_answer', {
+                name: text,  //{'name':'text'}为传入后端的数据格式
+            }, function (result) {  //json为返回的json值
+                aMesContent = '<div class="msg clearfix"><div class="user-assistant"></div><span class="triangle right"></span><div class="article">' + result.data.replace("\n","<br>") + '</div></div>'
+                $msgbox.html($msgbox.html() + aMesContent)
+                $('.col-l-t').animate({ scrollTop: document.getElementById('Chat').scrollHeight + 'px' }); //自动拉到最底部
+            });
+         }
+
+
+    }
+    </script>
+</body>
+</html>

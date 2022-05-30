@@ -1,0 +1,70 @@
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../static/images/北邮LOGO.png">
+    <title>开启探索</title>
+
+
+    <!--Bootstrap Stylesheet [ REQUIRED ]-->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+<style type="text/css">
+	#container{
+		background: url("../static/images/bk3.jpg");
+		 background-position: 100% 100%;
+    background-size: 100% auto;
+	}
+	#a{
+
+		font-size: 30px;
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+    /*text-decoration: none;*/
+    padding: 15px 50px;
+    border-radius: 8px;
+    border: 1px solid #000000;
+	background-color: transparent;
+    text-align: center;
+    color: #000000;
+	cursor: pointer;
+	}
+	#a:hover {
+    background-color:#6c757d;
+    cursor: pointer;
+}
+p{font-size: 70px;
+    font-weight: lighter;
+    font-family: 华光魏体_CNKI;
+    margin-bottom: 90px;}
+</style>
+
+    <!--Nifty Stylesheet [ REQUIRED ]-->
+    <link href="../static/css/nifty.min.css" rel="stylesheet">
+
+        
+    <!--Demo [ DEMONSTRATION ]-->
+    <link href="../static/css/nifty-demo.min.css" rel="stylesheet">
+
+</head>
+<body>
+	<div id="container" class="cls-container">
+		
+		<!-- BACKGROUND IMAGE -->
+		<!--===================================================-->
+		
+		<!-- LOGIN FORM -->
+		<!--===================================================-->
+		<div class="cls-content" style="margin-top:200px ">
+			<div class="mar-ver pad-btm" >
+			
+				<p class="text-muted"style="color:black " >基于金融知识图谱的知识计算引擎</p>
+				<a id="a" href="{{ url_for('search_page')}}">开启探索</a>
+			</div>
+		    
+		</div>
+	</div>
+	
+		</body>
+</html>
