@@ -26,8 +26,6 @@
 
 ![程序流](程序流.png)
 
----
-
 ## 准备数据
 1. 利用结构化三元组构建金融知识图谱，数据可在[此处](https://pan.baidu.com/s/1UQfu5c1Y7BfdMS_uNGrZug )下载获得，提取码：`sae3`
 2. 依照[此项目](https://github.com/XuekaiChen/FinKnowledgeGraph)中的中“2.安装环境”的提示，下载Neo4j
@@ -41,6 +39,6 @@
 ## 运行
 1. 开启Neo4j数据库finance_demo/db（默认7474端口）
 2. 运行`app.py`主程序，点击生成的网址链接（默认5000端口）
----
+
 ### 项目结构如下：
 ![程序流](项目结构.png)
